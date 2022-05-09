@@ -3,9 +3,9 @@ using System;
 namespace Emun.MyDDD.Contracts {
 
     /// <summary>
-    /// Simple Interface for marking Aggregates
+    /// Simple Interface for marking AggregateRoots
     /// </summary>
-    public interface IAggregate {
+    public interface IAggregateRoot {
 
 
     }
@@ -24,7 +24,7 @@ namespace Emun.MyDDD.Contracts {
     /// </summary>
     /// <typeparam name="TId">The type of primary key</typeparam>
     /// <typeparam name="TUserId">The type of User entity primary key.</typeparam>
-    public interface IAuditableAggregate<TId, TUserId> : IAuditableEntity<TUserId> {
+    public interface IAuditableAggregateRoot<TId, TUserId> : IAuditableEntity<TUserId> {
 
         TId Id { get; set; }
     }
